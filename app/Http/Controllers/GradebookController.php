@@ -16,22 +16,13 @@ class GradebookController extends Controller
      */
     public function index(Request $request)
     {
-        /////////////staro
         $per_page = $request->query('per_page', 10);
-        /////////////staro
+
+        $name = $request->query('name');  
 
 
         
-
-        $name = $request->query('name'); /////novo 
-
-
-        ///////////////novo
         $gradebooks = Gradebook::searchByName($name)->with('user')->orderByDesc('created_at')->paginate($per_page);
-
-        /////////////////////////staro
-        // $gradebooks = Gradebook::with('user')->orderByDesc('created_at')->paginate($per_page);
-        //////////////
 
         return response()->json($gradebooks);
     }
@@ -51,8 +42,7 @@ class GradebookController extends Controller
     public function show(string $id)
     {
         $gradebook = Gradebook::with('user')->with('students')->with('comments')->findOrFail($id);
-        // $user = $gradebook->user;
-        // $student = $gradebook->students;
+        
        
         
         return response()->json($gradebook);

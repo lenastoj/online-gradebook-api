@@ -76,14 +76,6 @@ class User extends Authenticatable implements JWTSubject
         return $query;
     }
 
-    // public function scopeSearchByFirstName($query, $first_name = '') {
-    //     if($first_name) {
-    //         $query->where('first_name', 'like', "%$first_name%")->orWhere('last_name', 'like', "%$first_name%");
-    //     }
-    //     return $query;
-    // }
 
-   
-   
 
 }

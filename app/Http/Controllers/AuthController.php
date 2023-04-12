@@ -48,10 +48,7 @@ class AuthController extends Controller
     }
 
     public function active_user() {
-        // $user = Auth::user();
-        // $gradebook = $user->gradebook;
-        // $student = $user->students;
-        // return response()->json($user);
+    
 
         $user = auth()->user();
         $userWithRelations = $user->load(['gradebook', 'students']);

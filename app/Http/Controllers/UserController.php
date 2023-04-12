@@ -13,8 +13,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        // $users = User::with('gradebook')->get();
-        // return response()->json($users);
+        
 
 
         $name = $request->query('name');
@@ -48,7 +47,6 @@ class UserController extends Controller
         $gradebook = $user->gradebook;
         $student = $user->students;
 
-        // $student = $user->gradebook->students;
         
         return response()->json($user);
     }

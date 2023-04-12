@@ -11,13 +11,10 @@ use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+    
     public function run()
     {
-        // User::factory(3)->create();
-
+       
         $users = User::factory(10)->create();
 
         for($i = 0; $i < 6; $i++) {

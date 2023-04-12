@@ -13,6 +13,6 @@ class GradebookTableSeeder extends Seeder
      */
     public function run()
     {
-        Gradebook::factory(1)->create();
+        // Gradebook::factory(1)->create();
     }
 }

@@ -34,7 +34,6 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail($id);
         $gradebook = $student->gradebook;
-        // $user = $student->user;
         
         return response()->json($student);
     }

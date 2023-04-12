@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 class CommentController extends Controller
 {
     
-    // public function index()
-    // {
-    //     $comments = Comment::all();
-    //     return response()->json($comments);
-    // }
+    public function index()
+    {
+        // $comments = Comment::all();
+        // return response()->json($comments);
+    }
 
     
     public function store(StoreCommentRequest $request)
@@ -37,21 +37,21 @@ class CommentController extends Controller
     }
 
 
-    // public function show(string $id)
-    // {
-    //     $comment = Comment::findOrFail($id);
-    //     $gradebook = $comment->gradebook;
-    //     $user = $comment->user;
+    public function show(string $id)
+    {
+        // $comment = Comment::findOrFail($id);
+        // $gradebook = $comment->gradebook;
+        // $user = $comment->user;
         
-    //     return response()->json($comment);
-    // }
+        // return response()->json($comment);
+    }
 
     
-    // public function update(Request $request, string $id)
-    // {
-    //     $comment = Comment::findOrFail($id);
-    //     $comment->update($request->validated());
-    //     return response()->json($comment);
-    // }
+    public function update(Request $request, string $id)
+    {
+        // $comment = Comment::findOrFail($id);
+        // $comment->update($request->validated());
+        // return response()->json($comment);
+    }
    
 }
