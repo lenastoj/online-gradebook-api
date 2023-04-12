@@ -1,15 +1,5 @@
 ## How to initialize project
 
-0. create database
-1. create .env and setup database name
-2. composer install
-3. php artisan key:generate
-4. composer require php-open-source-saver/jwt-auth
-5. php artisan vendor:publish --provider="PHPOpenSourceSaver\JWTAuth\Providers\LaravelServiceProvider"
-6. php artisan jwt:secret
-7. php artisan migrate:fresh
-   //////////////// seeding database
-8. php artisan db:seed --class=UserTableSeeder ---> This will create 10 users, 6 gradebooks. 3 gradebooks will have 3 students each, and 3 comments each.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
